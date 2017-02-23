@@ -1,0 +1,32 @@
+<ion-view view-title="Chats">
+ <ion-nav-bar class="bar-dark">
+      <ion-nav-buttons side="secondary">
+       <a href = "">
+       <i class = "button button-icon icon ion-android-share"></i>
+       </a> 
+       <a href = "#/settings">
+       <i class = "button button-icon icon ion-android-settings" ></i>
+       </a>
+      
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+      
+
+	<ion-content has-subheader="false" on-swipe-right = "goToTopics()">
+
+	  <ion-list>
+	  	<ion-item class = "chatsList item-icon-left" ng-repeat = "chat in chats" ng-click = "goToChat(chat)" on-hold = "showAction(chat)">
+	  	
+	  		<span class= "chatTopic">{{chat.topicName | uppercase |  limitTo:50}} </span>
+	  		<span ng-show = "chat.unread" class = "badge badge-assertive">{{chat.unread}} </span>
+	  		
+	  		<i ng-show = "chat.joined !='0'" class = "icon ion-checkmark-circled balanced"></i>
+	  		<i ng-show = "chat.joined =='0'" class = "icon ion-load-b energized"></i>
+	  	</ion-item>
+	  </ion-list>
+		
+		
+
+	</ion-content>
+</ion-view>

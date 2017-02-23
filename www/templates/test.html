@@ -1,0 +1,29 @@
+
+
+<ion-view view-title="Add Topic" >
+	<ion-nav-bar class = "bar-dark" title = "center">
+  <ion-nav-buttons  side="left">
+  	<a class = "button button-icon" href = "#/tab/topicList">
+  	<i class = "icon ion-ios-arrow-back"></i>
+  	<i class = "icon ion-android-list"></i>
+  	</a>
+  </ion-nav-buttons>
+</ion-nav-bar>
+	<ion-content has-subheader="false">
+
+	<button ng-click = "showMessages()"> messages
+  </button>
+  <button ng-click = "showChats()"> chats
+  </button>
+  <button ng-click = "data = ''"> Clear
+  </button>
+ <div>
+ {{data}}
+ </div>
+
+		
+	</ion-content>
+  
+
+
+</ion-view>

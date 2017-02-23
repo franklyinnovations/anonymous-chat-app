@@ -1,0 +1,46 @@
+<ion-view view-title="Settings" >
+	<ion-nav-bar class = "bar-dark" title = "center">
+  <ion-nav-buttons  side="left">
+  	<a class = "button button-icon" href = "#/tab/chats">
+  	<i class = "icon ion-ios-arrow-back"></i>
+  	<i class = "icon ion-chatboxes"></i>
+  	</a>
+  </ion-nav-buttons>
+</ion-nav-bar>
+	<ion-content has-subheader="false">
+		<ion-list>
+		<ion-toggle  toggle-class="toggle-dark">Show notifications</ion-toggle>
+
+		
+		<ion-toggle  toggle-class="toggle-dark" ng-model = "setting.vibrate" ng-checked = "{{setting.vibrate}}" ng-change="vibrateChange()">Vibrate on message</ion-toggle>
+		
+
+		<ion-item class = "item-icon-right">
+		<i class = "icon ion-ios-book dark">
+		</i>
+		Privacy Policy
+		</ion-item>
+		<ion-item>
+			
+		</ion-item>
+		
+		<ion-item>
+		Terms of Use
+		</ion-item>
+
+		<ion-item class = " item-icon-right" ng-click = "deleteAccount()">
+			
+			<i class = "icon ion-android-delete dark" ></i>
+			Delete Account
+
+		</ion-item>
+		
+
+		</ion-list>
+
+		<button ng-click = "testButton()"> click </button>
+		<a href = "#/test"> test </a>
+	</ion-content>
+
+
+</ion-view>

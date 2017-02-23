@@ -1,0 +1,35 @@
+
+
+<ion-view view-title="Add Topic" >
+	<ion-nav-bar class = "bar-dark" title = "center">
+  <ion-nav-buttons  side="left">
+  	<a class = "button button-icon" href = "#/tab/topicList">
+  	<i class = "icon ion-ios-arrow-back"></i>
+  	<i class = "icon ion-android-list"></i>
+  	</a>
+  </ion-nav-buttons>
+</ion-nav-bar>
+	<ion-content has-subheader="false">
+
+	 <div id = "addTopicForm" class="list card">
+  <label class="item item-input item-stacked-label">
+   <span class="input-label" ng-model = "form.category">Category -> </span>
+    <select ng-model = "form.category">
+     <option value = "something"> something </option>
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Topic</span>
+    <textarea rows = "5" ng-model = "form.topic"></textarea>
+  </label>
+  
+    <a class = " item button button-full button-dark" ng-click="add()">
+    Add
+    </a>
+  
+</div>
+		
+	</ion-content>
+
+
+</ion-view>

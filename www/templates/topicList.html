@@ -1,0 +1,44 @@
+<ion-view view-title="Topics">
+ <ion-nav-bar class="bar-dark">
+      <ion-nav-buttons side="secondary">
+       <a href = "">
+       <i class = "button button-icon icon ion-android-share"></i>
+       </a> 
+       <a href = "#/settings">
+       <i class = "button button-icon icon ion-android-settings" ></i>
+       </a>
+      </ion-nav-buttons>
+
+
+    </ion-nav-bar>
+
+    <ion-content on-swipe-left = "goToChats()">
+	
+		
+		<div class = "card" ng-repeat = "topic in topics" >
+           <div class = "item item-text-wrap">
+           <p class = "listTopicName">
+			{{topic.topic}}
+			</p>
+
+			</div>
+			<div class = "item topicListButtons">
+			<a class = "button icon-left ion-edit button-assertive" ng-click = "report(topic.topicId)"> Report </a>
+			<a class = "button icon-left ion-plus-round button-balanced" ng-click = "joinTopic(topic)" >Join Topic</a>
+
+			</div>
+		
+		</div>
+
+		<ion-spinner  ng-show = "showSpinner"></ion-spinner>
+
+
+	</ion-content>
+	<div class="float-button">
+ <span class="height-fix">
+    <a class="content" ng-href = "#/addTopic">
+      <i class="icon ion-plus-round"> </i>
+    </a>
+    </span>
+ </div>
+</ion-view>

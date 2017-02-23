@@ -1,0 +1,47 @@
+<ion-view view-title="Chat" >
+<ion-nav-bar id = "chatHeader" class="bar-dark" align-title="left">
+<ion-nav-buttons  side="left">
+<a class = "button button-icon" href = "#/tab/chats">
+	<i class = "icon ion-ios-arrow-back"></i>
+	<i class = "icon ion-chatboxes"></i>
+</a>
+</ion-nav-buttons>
+
+</ion-nav-bar>
+<ion-content has-subheader="false" id = "chatContent">
+
+<div id = "chatMessages">
+
+<button ng-click = "testButton()"> test </button>
+<li ng-repeat = "message in messages | reverse"  ng-class = "{'chatMessage':true,'chatMessageRight':!message.how,'chatMessageLeft':message.how}">
+{{message.message}}
+</li>
+
+</div>
+ 
+
+	
+
+</ion-content>
+
+
+
+<ion-footer-bar id = "chatFooter"  class="bar-dark">
+	 
+	 <label id = "chatWrapper" class="item-input-wrapper ">
+        <input ng-model="message" id = "chatInputField" type="text"  ng-disabled = "{{!socketConnect}}"  placeholder="{{socketConnect?'Type in your message..':'Offline'}}" ng-keypress="keyPressed($event)" maxlength="1000">
+    </label>
+    
+        <button id = "chatSendButton" ng-click="sendMessage()" class="button button-balanced">
+        SEND
+        </button>
+     
+    
+</ion-footer-bar>
+
+
+
+
+
+</ion-view>
+

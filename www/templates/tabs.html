@@ -1,0 +1,25 @@
+<!--
+Create tabs with an icon and label, using the tabs-dark style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-striped tabs-icon-top  tabs-color-active-dark" {{$root.hideTabs}}>
+
+  <!-- Dashboard Tab -->
+  <ion-tab class = "fullWidthTab" title="Topics" icon-off="ion-android-list dark" icon-on="ion-android-list " href="#/tab/topicList">
+    <ion-nav-view name="tab-topicList"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Chats Tab -->
+  <ion-tab class = "fullWidthTab" title="Chats" icon-off="ion-chatboxes dark" icon-on="ion-chatboxes " href="#/tab/chats" badge="badgeNumber" badge-style = "badge-assertive">
+    <ion-nav-view name="tab-chats"></ion-nav-view>
+  </ion-tab>
+
+  
+
+  <!-- Account Tab -->
+ 
+
+
+</ion-tabs>
+
